@@ -1,0 +1,118 @@
+{%extends 'emp_home.html'%}
+{%block side%}
+<div class="shadow-lg p-3 mb-5 bg-white rounded">
+
+    <div class="container ">
+        <form class="row g-3" method="post" enctype="multipart/form-data">
+            {%csrf_token%}
+            <table class="table">
+                <tr>
+                <tr>
+                    <th><label for="id_first_edu" class="form-label">School Class:</label></th>
+                    <td>
+
+                        <input type="text" name="first_edu" value="12" maxlength="100" required id="id_first_edu" class="form-control"  value="{{emp_edu.first_edu}}">
+
+
+                    </td>
+                </tr>
+
+                <tr>
+                    <th><label for="id_first_p_year" class="form-label">Passing Year:</label></th>
+                    <td>
+
+                        <input type="text" name="first_p_year"  value="{{emp_edu.first_p_year}}" maxlength="100" required
+                            id="id_first_p_year" class="form-control">
+
+
+                    </td>
+                </tr>
+
+                <tr>
+                    <th><label for="id_first_col" class="form-label">School Name:</label></th>
+                    <td>
+
+                        <input type="text" name="first_col" value="{{emp_edu.first_col}}" maxlength="100" required id="id_first_col" class="form-control">
+
+
+                    </td>
+                </tr>
+
+                <tr>
+                    <th><label for="id_sec_edu" class="form-label">Graduation:</label></th>
+                    <td>
+
+                        <input type="text" name="sec_edu" value="B.E" maxlength="100" required id="id_sec_edu" class="form-control"  value="{{emp_edu.sec_edu}}">
+
+
+                    </td>
+                </tr>
+
+                <tr>
+                    <th><label for="id_sec_p_year" class="form-label">Passing Year:</label></th>
+                    <td>
+
+                        <input type="text" name="sec_p_year" value="{{emp_edu.sec_p_year}}" maxlength="100" required id="id_sec_p_year" class="form-control">
+
+
+                    </td>
+                </tr>
+
+                <tr>
+                    <th><label for="id_sec_col" class="form-label">College/University:</label></th>
+                    <td>
+
+                        <input type="text" name="sec_col" value="{{emp_edu.sec_col}}" maxlength="100" required id="id_sec_col" class="form-control">
+
+
+                    </td>
+                </tr>
+                
+
+                <tr>
+                    
+                    <th><label for="id_thrd_edu" class="form-label" class="form-label">Post-Graduation:</label></th>
+                    <td>
+
+                        <input type="text" name="thrd_edu"  value="{{emp_edu.thrd_edu}}" class="form-control" maxlength="100" required id="id_thrd_edu">
+
+
+                    </td>
+                </tr>
+
+                <tr>
+                    <th><label for="id_thrd_p_year" class="form-label">Passing Year:</label></th>
+                    <td>
+
+                        <input type="text" name="thrd_p_year" maxlength="100" value="{{emp_edu.thrd_p_year}}"  required id="id_thrd_p_year" class="form-control">
+
+
+                    </td>
+                </tr>
+
+                <tr>
+                    <th><label for="id_thrd_col" class="form-label">College/University:</label></th>
+                    <td>
+
+                        <input type="text" name="thrd_col" maxlength="100" required id="id_thrd_col"
+                        class="form-control" value="{{emp_edu.thrd_col}}">
+
+
+
+
+                    </td>
+                </tr>
+                </tr>
+            </table>
+
+
+            <div class="col-12 text-center">
+                <button type="submit" class="btn btn-outline-info btn-lg ">Update Education Details</button>
+            </div>
+        </form>
+    </div>
+
+</div>
+
+
+{%endblock%}

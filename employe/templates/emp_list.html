@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    {% extends 'base.html'%}
+    {%block main%}
+    <h2 class="text-center p-2">Enploye List</h2>
+    <div class="shadow-lg p-3 mb-5 bg-white rounded">
+        <div class="container ">
+            <table class="table table-hover">
+                <thead>
+                    <tr>
+                        <th scope="col">Employe Code</th>
+                        <th scope="col">Name</th>
+                        <th scope="col">Email</th>
+                        <!-- <th colspan="3">Attendence</th> -->
+                    </tr>
+                </thead>
+                {%for i in data%}
+                <tbody>
+                    <tr>
+                        <td>{{i.Ecode}}</td>
+                        <td style="text-transform: capitalize;">{{i.user.first_name}} {{i.user.last_name}}</td>
+                        <td>{{i.user.username}}</td>
+                        
+                             
+                            </tr>
+                            {%endfor%}
+                            
+
+                        </form>
+                    
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    {%endblock%}
+</body>
+
+</html>

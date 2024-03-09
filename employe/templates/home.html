@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+</head>
+
+<body>
+    {% extends 'base.html'%}
+    {%block main%}
+    <div class="container-fluid">
+        <header class="row">
+           
+            <div class="col-12 nopadding">
+                <div id="carousel1" class="carousel slide" data-ride="carousel">
+                    <div class="carousel-inner" role="listbox">
+                        <div class="carousel-item active">
+                            <div class"container">
+                                <img class="d-block img-fluid" src="https://source.unsplash.com/random/1920x720/?office"
+                                    alt="First slide">
+                            </div>
+                        </div>
+                        
+                    </div>
+                   
+                </div>
+            </div>
+        </header>
+        <div class="row justify-content-center">
+            <main class="col-12 col-sm-7">
+                <h2>Work-Culture</h2>
+                <hr>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam blandit accumsan commodo. Sed varius
+                    elit ac gravida vulputate. Proin rhoncus semper magna sit amet vulputate. Vivamus rhoncus sed odio a
+                    facilisis. Duis sit amet turpis ultricies, congue dolor id, feugiat nulla. Integer quis orci enim.
+                    Ut luctus diam ex, a suscipit urna feugiat nec. Fusce tristique est in luctus pulvinar. Integer ante
+                    tortor, lacinia nec lectus et, posuere pharetra purus. Quisque tempor leo vehicula, pharetra lectus
+                    sed, efficitur ligula. Sed sed feugiat dolor. Sed auctor felis ut velit aliquet, sed finibus odio
+                    iaculis. Mauris semper neque at urna sagittis, sit amet pellentesque leo sodales. Pellentesque
+                    habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Curabitur sagittis
+                    sed ante ut semper. Cras aliquam cursus rutrum.
+
+                    Quisque porttitor metus vitae pretium sodales. Sed varius leo erat, in sagittis elit vulputate a.
+                    Integer tincidunt ligula arcu, nec sodales sem tincidunt sit amet. In hac habitasse platea dictumst.
+                    Donec ornare neque ut elit ultrices tempus. Vestibulum pulvinar aliquet erat in feugiat. Lorem ipsum
+                    dolor sit amet, consectetur adipiscing elit. Maecenas eu tempus dolor, eu auctor turpis. Aliquam
+                    vitae ipsum nec ex convallis viverra in vitae lectus. Nunc sollicitudin enim vel sollicitudin
+                    euismod. Donec ut gravida nisl. Aliquam quis sollicitudin justo. In ut enim neque. Fusce auctor ante
+                    nunc. Sed non felis ac metus venenatis porttitor id nec nisl. Phasellus viverra molestie pharetra.
+                </p>
+                <h2>Work Events</h2>
+                <hr>
+                <ul class="list-unstyled">
+                    <li class="media">
+                        <img class="d-flex mr-3" src="https://source.unsplash.com/random/350x250/?office" alt="Evento 1">
+                        <div class="media-body">
+                            <h5 class="mt-0 mb-1">Office Event</h5>
+                            Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin.
+                            Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc
+                            ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.
+                        </div>
+                    </li>
+                    <li class="media my-4">
+                        <img class="d-flex mr-3" src="https://source.unsplash.com/random/350x250/?employe" alt="Evento 2">
+                        <div class="media-body">
+                            <h5 class="mt-0 mb-1">Learning Event</h5>
+                            Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin.
+                            Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc
+                            ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.
+                        </div>
+                    </li>
+                    <li class="media">
+                        <img class="d-flex mr-3" src="https://source.unsplash.com/random/350x250/?work" alt="Evento 3">
+                        <div class="media-body">
+                            <h5 class="mt-0 mb-1">Skills Event</h5>
+                            Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin.
+                            Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc
+                            ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.
+                        </div>
+                    </li>
+                </ul>
+                
+            </main>
+            <aside id="sidebar" class="col-12 col-sm-3">
+                <h2>Employe-official </h2>
+                <hr>
+                <img class="img-fluid w-100" src="https://source.unsplash.com/random/350x250/?office" alt="Sidebar 1">
+                <img class="img-fluid w-100" src="https://source.unsplash.com/random/350x250/?work" alt="Sidebar 1">
+            </aside>
+        </div>
+        
+    </div>
+    {%endblock%}
+</body>
+
+</html>

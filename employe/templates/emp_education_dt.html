@@ -1,0 +1,94 @@
+{%extends 'emp_home.html'%}
+{%block side%}
+
+{%if e.address%}
+<div class="container">
+    <section class="vh-70" style="background-color: #f4f5f7;">
+        <h3 class="text-center" style="font-weight: 900;color: cadetblue;">Education Information</h3>
+        <div class="container py-1 h-60">
+            <div class="row d-flex justify-content-center align-items-center h-60">
+                <div class="col col-lg-6 mb-2 mb-lg-0">
+                    <div class="card mb-3" style="border-radius: .5rem;">
+                        <div class="col-md-12">
+                            <div class="card-body p-2">
+                                <h6>10/12 School</h6>
+                                <hr class="mt-0 mb-2">
+                                <div class="row pt-1">
+                                    <div class="col-3 mb-3">
+                                        <h6>Class</h6>
+                                        <p class="text-muted">{{e.first_edu}}</p>
+                                    </div>
+                                    <div class="col-5 mb-2">
+                                        <h6>School/College</h6>
+                                        <p class="text-muted">{{e.first_col}}</p>
+                                    </div>
+                                    <div class="col-4 mb-2">
+                                        <h6>Passing Year</h6>
+                                        <p class="text-muted">{{e.first_p_year}}</p>
+                                    </div>
+                                </div>
+                                <h6>Graduation Information</h6>
+                                <hr class="mt-0 mb-2">
+                                <div class="row pt-1">
+                                    <div class="col-4 mb-3">
+                                        <h6>Stream/Course</h6>
+                                        <p class="text-muted">{{e.sec_edu}}</p>
+                                    </div>
+                                    <div class="col-4 mb-3">
+                                        <h6>College</h6>
+                                        <p class="text-muted">{{e.sec_col}}</p>
+                                    </div>
+                                    <div class="col-4 mb-3">
+                                        <h6>Contact</h6>
+                                        <p class="text-muted">{{e.sec_p_year}}</p>
+                                    </div>
+                                </div>
+                                <h6>Post Graduation Information</h6>
+                                <hr class="mt-0 mb-2">
+                                <div class="row pt-1">
+                                    <div class="col-4 mb-3">
+                                        <h6>Stream/Course</h6>
+                                        <p class="text-muted">{{e.thrd_edu}}</p>
+                                    </div>
+                                    <div class="col-4 mb-3">
+                                        <h6>College</h6>
+                                        <p class="text-muted">{{e.thrd_col}}</p>
+                                    </div>
+                                    <div class="col-4 mb-1">
+                                        <h6>Passing Year</h6>
+                                        <p class="text-muted">{{e.thrd_p_year}}</p>
+                                    </div>
+                                    <hr>
+
+                                </div>
+                                <div class="row pt-1">
+                                    <div class="col-12 mb-3">
+                                        <a href="/emp_education_update/{{e.id}}" class="btn btn-outline-success btn-lg">Update Your Eductaion Details</a>
+                                        
+                                    </div>
+                                </div>
+                                <!-- <hr class="mt-0 mb-2"> -->
+
+
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+</div>
+</section>
+</div>
+{%else%}
+<div class="shadow-lg p-3 mb-5 bg-white rounded">
+<div class="container d-flex justify-content-center">
+    <a href="/emp_education"  class="btn btn-outline-success btn-lg text-center">Add Education Details</a>
+</div>
+</div>
+{%endif%}
+{%endblock%}
+
+
+
+

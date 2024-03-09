@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    {% extends 'base.html'%}
+    {%block main%}
+
+    <h2 class="text-center p-2">Enploye Resister Form</h2>
+    <div class="shadow-lg p-3 mb-5 bg-white rounded">
+
+    
+    <div class="container ">
+        <form class="row g-3" method="post" name="resister" onsubmit="return checkpass()">
+            {%csrf_token%}
+            <div class="col-md-6">
+                <label for="inputEmail4" class="form-label">First Name</label>
+                <input type="text" class="form-control" id="inputEmail4" pattern="[A-Za-z]+"
+                    placeholder="Enter Your First Name" required name="f_n">
+            </div>
+            <div class="col-md-6">
+                <label for="inputPassword4" class="form-label">Last Name</label>
+                <input type="text" class="form-control" id="inputPassword4" pattern="[A-Za-z]+"
+                    placeholder="Enter Your Last Name" required name="l_n">
+            </div>
+            <div class="col-12">
+                <label for="inputAddress" class="form-label">Employe Code</label>
+                <input type="number" class="form-control" id="inputAddress" placeholder="Enter Youe Vailid Code"
+                    pattern="[0-9]" name="ec" required>
+            </div>
+            <div class="col-12">
+                <label for="inputAddress" class="form-label">Email</label>
+                <input type="email" class="form-control" id="inputAddress" placeholder="example@gmail.com" required name="email">
+            </div>
+            <div class="col-6">
+                <label for="inputAddress2" class="form-label">Password</label>
+                <input type="password" class="form-control" id="p" placeholder="Enter Your Password"
+                     required name="p">
+            </div>
+            <div class="col-md-6">
+                <label for="inputCity" class="form-label">Comfirm Password</label>
+                <input type="password" class="form-control" id="cp" placeholder="Confirm Your Password"
+                    required name="cp">
+            </div>
+
+
+            <div class="col-12 text-center">
+                <button type="submit" class="btn btn-outline-success btn-lg ">Resister</button>
+            </div>
+        </form>
+    </div>
+</div>
+<script>
+    function checkpass(){
+       let p=document.querySelector('#p')
+        let cp=document.querySelector('#cp')
+        if(p.innerText!=cp.innerText){
+            alert('Password And Confirm password Not Matched')
+            return false
+        }
+        else{
+            alert('Password Matched')
+            
+        }
+
+    }
+
+</script>
+
+    {%endblock%}
+</body>
+
+</html>

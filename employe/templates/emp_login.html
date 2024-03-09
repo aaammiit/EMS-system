@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    {% extends 'base.html'%}
+    {%block main%}
+
+    <h2 class="text-center p-2">Enploye Login Form</h2>
+   
+    <div class="shadow-lg p-3 mb-5 bg-white rounded">
+
+    
+    <div class="container ">
+        {%if err == 'yes' %}
+        <div class="alert alert-danger" role="alert">
+            !Something Went Wrong Please Check Your User Name And Password
+          </div>
+        {%endif%}
+        <form class="row g-3" method="post">
+            {%csrf_token%}
+            
+            
+            <div class="col-12">
+                <label for="inputAddress" class="form-label">Enter Your Email</label>
+                <input type="email" class="form-control" id="inputAddress" placeholder="example@gmail.com" required name="email">
+            </div>
+            <div class="col-12">
+                <label for="inputAddress2" class="form-label">Enter Your Password</label>
+                <input type="password" class="form-control" id="p" placeholder="Enter Your Password"
+                     required name="p">
+            </div>
+           
+
+
+            <div class="col-12 text-center">
+                <button type="submit" class="btn btn-outline-success btn-lg ">Login</button>
+            </div>
+        </form>
+    </div>
+</div>
+
+
+    {%endblock%}
+</body>
+
+</html>

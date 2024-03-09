@@ -1,0 +1,69 @@
+{%extends 'emp_home.html'%}
+{%block side%}
+
+{%if dt%}
+<div class="container">
+    <section class="vh-100" style="background-color: #f4f5f7;">
+        <div class="container py-1 h-90">
+            <div class="row d-flex justify-content-center align-items-center h-90">
+                <div class="col col-lg-6 mb-2 mb-lg-0">
+                    <div class="card mb-3" style="border-radius: .5rem;">
+
+                        <div class="row g-0">
+                            <div class="col-md-12">
+                                <div class="card-body p-2">
+                                    <h3 class="text-center">Your Leave Information</h3>
+                                    {%for i in dt%}
+                                    <hr class="mt-0 mb-1">
+                                    <div class="row pt-1">
+                                        <div class="col-12 mb-1">
+                                            <h6>Leave Type</h6>
+                                            <p class="text-muted">{{i.ltype}}</p>
+                                        </div>
+                                        <div class="col-6 mb-1">
+                                            <h6> Start-Date</h6>
+                                            <p class="text-muted">{{i.lstartdate}}</p>
+                                        </div>
+                                        <div class="col-6 mb-1">
+                                            <h6> End-Date</h6>
+                                            <p class="text-muted">{{i.lenddate}}</p>
+                                        </div>
+                                        <div class="col-12 mb-1">
+                                            <h6>Leave Description</h6>
+                                            <p class="text-muted">{{i.purpos}}</p>
+                                        </div>
+                                    </div>
+
+                                    {%if i.aprov%}
+                                   
+                                    <hr class="mt-0 mb-1">
+                                    <div class="row pt-1">
+                                        <div class="col-12 mb-1">
+                                        <h5 class="btn btn btn-outline-success btn-lg ">Leave Approved</h5>
+                                    </div>
+                                    {%endif%}
+                                   
+                                    {%if i.reject%}
+                                        <hr class="mt-0 mb-1">
+                                        <div class="row pt-1">
+                                        <div class="col-6 mb-1 text-center">
+                                            <h5 class="btn btn-outline-danger btn-lg ">Leave Rejected</h5>
+                                        </div>
+                                    {%endif%}
+
+
+                                        </div>
+                                        {%endfor%}
+                                    </div>
+                                </div>
+                            </div>
+                            
+                        </div>
+                    </div>
+                </div>
+    </section>
+</div>
+{%else%}
+
+{%endif%}
+{%endblock%}

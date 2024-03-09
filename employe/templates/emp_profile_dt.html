@@ -1,0 +1,85 @@
+{%extends 'emp_home.html'%}
+{%block side%}
+
+{%if e.gender%}
+<div class="container">
+    <section class="vh-100" style="background-color: #f4f5f7;">
+        <div class="container py-1 h-90">
+            <div class="row d-flex justify-content-center align-items-center h-90">
+                <div class="col col-lg-6 mb-2 mb-lg-0">
+                    <div class="card mb-3" style="border-radius: .5rem;">
+
+                        <div class="row g-0">
+                            <div class="col-md-4 gradient-custom text-center text-white"
+                                style="border-top-left-radius: .5rem; border-bottom-left-radius: .5rem;">
+
+                                <img src="{{e.img.url}}" alt="Avatar" class="img-fluid my-4" alt="" height="100" width="100"
+                                    style="border-radius: 30%;background: transparent;" />
+
+                                <i class="far fa-edit mb-5"></i>
+                            </div>
+
+                            <div class="col-md-12">
+                                <div class="card-body p-2">
+                                    <h6>Professional Information</h6>
+                                    <hr class="mt-0 mb-1">
+                                    <div class="row pt-1">
+                                        <div class="col-6 mb-1">
+                                            <h6>Departmant</h6>
+                                            <p class="text-muted">{{e.dept}}</p>
+                                        </div>
+                                        <div class="col-6 mb-1">
+                                            <h6>Designation</h6>
+                                            <p class="text-muted">{{e.dig}}</p>
+                                        </div>
+                                    </div>
+                                    <h6>Other Information</h6>
+                                    <hr class="mt-0 mb-1">
+                                    <div class="row pt-1">
+                                        <div class="col-4 mb-1">
+                                            <h6>Gender</h6>
+                                            <p class="text-muted">{{e.gender}}</p>
+                                        </div>
+                                        <div class="col-4 mb-1">
+                                            <h6>Date Of Birth</h6>
+                                            <p class="text-muted">{{e.dob}}</p>
+                                        </div>
+                                        <div class="col-4 mb-1">
+                                            <h6>Contact</h6>
+                                            <p class="text-muted">{{e.contact}}</p>
+                                        </div>
+                                    </div>
+                                    <h6>Personal Information</h6>
+                                    <hr class="mt-0 mb-1">
+                                    <div class="row pt-1">
+                                        <div class="col-4 mb-1">
+                                            <h6>Joining Date</h6>
+                                            <p class="text-muted">{{e.join_data}}</p>
+                                        </div>
+                                        <div class="col-8 mb-1">
+                                            <h6>Email</h6>
+                                            <p class="text-muted">{{e.user.username}}</p>
+                                        </div>
+                                        
+                                    </div>
+                                    <hr class="mt-0 mb-1">
+                                    <div class="row pt-1">
+                                        <div class="col-12 mb-1">
+                                            <a href="up/{{e.id}}" class="btn btn-outline-success btn-lg">Update Your Profile</a>
+                                        </div>
+                                   
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>
+{%else%}
+<div class="container d-flex justify-content-center">
+    <a href="/emp_profile"  class="btn btn-outline-success btn-lg text-center">Add Profile</a>
+</div>
+{%endif%}
+{%endblock%}

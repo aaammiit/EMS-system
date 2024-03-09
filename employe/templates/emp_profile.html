@@ -1,0 +1,94 @@
+{%extends 'emp_home.html'%}
+{%block side%}
+
+
+<div class="shadow-lg p-3 mb-5 bg-white rounded">
+
+    <div class="container ">
+        <form class="row g-3" method="post" enctype="multipart/form-data">
+            {%csrf_token%}
+            <div class="col-6">
+                <label for="inputAddress" class="form-label">Employe Code</label>
+                <input type="number" class="form-control" id="inputAddress" placeholder="Enter Youe Vailid Code"
+                    pattern="[0-9]" name="ec" value="">
+            </div>
+            <div class="col-6">
+                <label for="inputAddress" class="form-label">Upload Your Picture</label>
+                <input type="file" class="form-control" id="inputAddress" name="pic">
+            </div>
+            <div class="col-md-6">
+                <label for="inputEmail4" class="form-label">First Name</label>
+                <input type="text" class="form-control" id="inputEmail4" pattern="[A-Za-z]+"
+                    placeholder="Enter Your First Name" required name="f_n" value="{{user.first_name}}">
+            </div>
+            <div class="col-md-6">
+                <label for="inputPassword4" class="form-label">Last Name</label>
+                <input type="text" class="form-control" id="inputPassword4" pattern="[A-Za-z]+"
+                    placeholder="Enter Your Last Name" required name="l_n" value="{{user.last_name}}">
+            </div>
+            <div class="col-md-6">
+                <label for="inputEmail4" class="form-label">Designation</label>
+                <select name="dig" id="" class="form-select">
+                    <option value="Technician">Technician</option>
+                    <option value="Developer">Developer</option>
+                    <option value="Team Leaders">Team Leaders</option>
+                    <option value="Analysts">Analysts</option>
+                    <option value="Interns">Interns</option>
+                    <option value=" Manager"> Manager</option>
+                    <option value="HR">HR</option>
+                    <option value="Directior">Directior</option>
+                    <option value="Other">Other</option>
+                </select>
+            </div>
+            <div class="col-md-6">
+                <label for="inputPassword4" class="form-label">Departmant</label>
+                <select name="dpt" id="" class="form-select">
+                    <option value="Production">Production</option>
+                    <option value="Bussiness Development">Bussiness Development</option>
+                    <option value="Quality">Quality</option>
+                    <option value="MSales">Sales</option>
+                    <option value="Purchsing">Purchsing</option>
+                    <option value="Other">Other</option>
+                </select>
+
+            </div>
+
+            <div class="col-8">
+                <label for="inputAddress" class="form-label">Email</label>
+                <input type="email" class="form-control" id="inputAddress" placeholder="example@gmail.com" required
+                    name="email" value="{{user.username}}">
+            </div>
+            <div class="col-4">
+                <label for="inputAddress" class="form-label">Joining Date</label>
+                <input type="date" class="form-control" id="inputAddress" name="jdate" value="{{emp.join_data}}">
+            </div>
+            <div class="col-md-6">
+                <label for="inputPassword4" class="form-label">Contact [{{emp.contact}}]</label>
+                <input type="text" class="form-control" id="inputPassword4" placeholder="Enter Your Contact NO."
+                    name="con">
+            </div>
+            <div class="col-md-3">
+                <label for="inputEmail4" class="form-label">Date Of Birth </label>
+                <input type="date" class="form-control" id="inputEmail4" placeholder="Enter Your Date of Birth"
+                    name="dob">
+            </div>
+
+            <div class="col-md-3">
+                <label for="inputEmail4" class="form-label">Gender [{{emp.gender}}]</label>
+                <select name="gen" id="" class="form-select">
+                    <option value="Male">Male</option>
+                    <option value="Male">Female</option>
+                    <option value="Male">Other</option>
+                </select>
+            </div>
+
+
+            <div class="col-12 text-center">
+                <button type="submit" class="btn btn-outline-success btn-lg ">Create Profile</button>
+            </div>
+        </form>
+    </div>
+
+</div>
+
+{%endblock%}

@@ -1,0 +1,61 @@
+{%extends 'emp_home.html'%}
+{%block side%}
+<div class="shadow-lg p-3 mb-5 bg-white rounded">
+
+    <div class="container ">
+        <h3 class="text-center" style="font-weight: 900;color: cadetblue;">Add Employe Job Experience</h3>
+        <p class="text-center" style="color: red;">You Can Add minimum 3 Previous Company Work Experience</p>
+        <form class="row g-3" method="post" enctype="multipart/form-data">
+            {%csrf_token%}
+            <div class="col-4">
+                <label for="inputAddress" class="form-label">Job-Title-1</label>
+                <input type="text" class="form-control" id="inputAddress" placeholder="" name="jt1">
+            </div>
+            <div class="col-4">
+                <label for="inputAddress" class="form-label">Company Name-1</label>
+                <input type="text" class="form-control" id="inputAddress" placeholder="" name="cn1">
+            </div>
+            <div class="col-4">
+                <label for="inputAddress" class="form-label">Years Of Experience-1</label>
+                <input type="text" class="form-control" id="inputAddress" placeholder="" name="yoe1">
+            </div>
+            <div class="col-4">
+                <label for="inputAddress" class="form-label">Job-Title-2</label>
+                <input type="text" class="form-control" id="inputAddress" placeholder="" name="jt2">
+            </div>
+            <div class="col-4">
+                <label for="inputAddress" class="form-label">Company Name-2</label>
+                <input type="text" class="form-control" id="inputAddress" placeholder="" name="cn2">
+            </div>
+            <div class="col-4">
+                <label for="inputAddress" class="form-label">Years Of Experience-2</label>
+                <input type="text" class="form-control" id="inputAddress" placeholder="" name="yoe2">
+            </div>
+            <div class="col-4">
+                <label for="inputAddress" class="form-label">Job-Title-3</label>
+                <input type="text" class="form-control" id="inputAddress" placeholder="" name="jt3">
+            </div>
+            <div class="col-4">
+                <label for="inputAddress" class="form-label">Company Name-3</label>
+                <input type="text" class="form-control" id="inputAddress" placeholder="" name="cn3">
+            </div>
+            <div class="col-4">
+                <label for="inputAddress" class="form-label">Years Of Experience-3</label>
+                <input type="text" class="form-control" id="inputAddress" placeholder="" name="yoe3">
+            </div>
+
+
+
+
+
+
+            <div class="col-12 text-center">
+                <button type="submit" class="btn btn-outline-success btn-lg ">Save </button>
+            </div>
+        </form>
+    </div>
+
+</div>
+
+
+{%endblock%}

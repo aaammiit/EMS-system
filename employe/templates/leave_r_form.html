@@ -1,0 +1,39 @@
+{%extends 'emp_home.html'%}
+{%block side%}
+<h2 class="text-center p-2">Leave Request Form</h2>
+<div class="shadow-lg p-3 mb-5 bg-white rounded">
+
+    <div class="container ">
+        <form class="row g-3" method="post" enctype="multipart/form-data">
+            {%csrf_token%}
+            <div class="col-12">
+                <label for="inputAddress" class="form-label">Leave Type</label>
+                <select name="ltype" id="" class="form-select">
+                    <option value="Other">Other</option>
+                    <option value="Sick Leave (SL)">Sick Leave (SL)</option>
+                    <option value="Casual Leave (CL)">Casual Leave (CL)</option>
+                    <option value="Maternity Leave (ML)">Maternity Leave (ML)</option>
+                    <option value="Marriage Leave">Marriage Leave</option>
+                    <option value="Loss Of Pay Leave (LOP/LWP)">Loss Of Pay Leave (LOP/LWP)</option>
+                </select>
+            </div>
+            <div class="col-6">
+                <label for="inputAddress" class="form-label">Leave Start date</label>
+                <input type="date" class="form-control" id="inputAddress" name="lstartdate">
+            </div>
+            <div class="col-md-6">
+                <label for="inputEmail4" class="form-label">Leave End date</label>
+                <input type="date" class="form-control" id="inputEmail4" placeholder=""  name="lenddate">
+            </div>
+            <div class="col-12">
+                <label for="inputAddress" class="form-label">Leave Description</label>
+                <input type="text" class="form-control" id="inputAddress" name="purpos">
+            </div>
+
+            <div class="col-12 text-center">
+                <button type="submit" class="btn btn-outline-success btn-lg ">Save </button>
+            </div>
+        </form>
+    </div>
+</div>
+{%endblock%}
