@@ -35,6 +35,7 @@ urlpatterns = [
     path('emp_education_update/<int:pk>',v.Edu_Update_Emp.as_view()),
     path('emp_exp',v.Emp_exp),
     path('emp_exp_detail',v.Emp_Exp_detail),
+    path('emp_exp_update/<int:pk>',v.Edu_Exp_Emp.as_view()),
     path('leave_r_form',v.Leave_request_form),
     path('leave_r_dt',v.Leave_detail),
 ]

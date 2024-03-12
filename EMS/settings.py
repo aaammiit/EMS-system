@@ -34,7 +34,7 @@ ALLOWED_HOSTS = []
 INSTALLED_APPS = [
    
      # General use templates & template tags (should appear first)
-    'adminlte3',
+    'jazzmin',
      # Optional: Django admin theme (must be before django.contrib.admin)
     'adminlte3_theme',
     'django.contrib.admin',
@@ -46,6 +46,85 @@ INSTALLED_APPS = [
     'employe',
     'Hr_admin',
 ]
+
+
+
+
+JAZZMIN_SETTINGS = {
+    "site_title": "EMS-System",
+     "site_header": "EMS-System",
+    "site_brand": "EMS-System",
+#   "site_logo": 'user/static/image/app-store.png',
+#   "site_logo_classes": "img-circle",
+#    "login_logo":'user/static/image/app-store.png',
+    "welcome_sign": "Welcome to the EMS-System Admin Pannel",
+     "copyright": "EMS-System Ltd",
+     "topmenu_links": [
+
+        # Url that gets reversed (Permissions can be added)
+        {"name": "Home",  "url": "admin:index", "permissions": ["auth.view_user"]},
+
+        # external url that opens in a new window (Permissions can be added)
+        {"name": "Support", "url": "https://github.com/farridav/django-jazzmin/issues", "new_window": True},
+
+         {"name": "View Site", "url": "/"},
+
+        # model admin to link to (Permissions checked against model)
+        {"model": "auth.User"},
+
+    ],
+     "usermenu_links": [
+        {"name": "Support", "url": "https://github.com/farridav/django-jazzmin/issues", "new_window": True},
+        {"model": "auth.user"}
+    ],
+
+     "custom_css": True,
+    "custom_js": None,
+    # Whether to link font from fonts.googleapis.com (use custom_css to supply font otherwise)
+    "use_google_fonts_cdn": True,
+    # Whether to show the UI customizer on the sidebar
+    "show_ui_builder": True,
+
+   
+
+}
+
+
+LOGOUT_REDIRECT_URL = '/'
+
+JAZZMIN_UI_TWEAKS = {
+    "navbar_small_text": False,
+    "footer_small_text": False,
+    "body_small_text": True,
+    "brand_small_text": False,
+    "brand_colour": "navbar-orange",
+    "accent": "accent-maroon",
+    "navbar": "navbar-dark",
+    "no_navbar_border": False,
+    "navbar_fixed": True,
+    "layout_boxed": False,
+    "footer_fixed": True,
+    "sidebar_fixed": False,
+    "sidebar": "sidebar-dark-indigo",
+    "sidebar_nav_small_text": False,
+    "sidebar_disable_expand": False,
+    "sidebar_nav_child_indent": False,
+    "sidebar_nav_compact_style": False,
+    "sidebar_nav_legacy_style": True,
+    "sidebar_nav_flat_style": False,
+    "theme": "cerulean",
+    "dark_mode_theme": "darkly",
+    "button_classes": {
+        "primary": "btn-primary",
+        "secondary": "btn-secondary",
+        "info": "btn-outline-info",
+        "warning": "btn-outline-warning",
+        "danger": "btn-outline-danger",
+        "success": "btn-success"
+    }
+}
+
+
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',

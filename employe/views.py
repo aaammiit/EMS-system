@@ -96,7 +96,7 @@ def Emp_profile(request):
             err='no'
             pro='yes'
             
-            return redirect('/emp_home')
+            return redirect('/emp_home_dashboard')
         except:
             err='yes'
      
@@ -117,7 +117,7 @@ class Update_Emp(UpdateView):
     model=Employe
     template_name='emp_update.html'
     fields=['gender','dob','dept','contact','dig','join_data']
-    success_url='/emp_home'
+    success_url='/emp_home_dashboard'
 
 
 def Emp_Education(request):    
@@ -170,14 +170,14 @@ def Emp_Education_detail(request):
         e=Emp_Edu.objects.filter(user=user).first()
         return render(request,'emp_education_dt.html',locals())
     except:
-        return redirect('/emp_home')
+        return redirect('/emp_home_dashboard')
 
     
 class Edu_Update_Emp(UpdateView):
     model=Emp_Edu
     template_name='emp_edu_update.html'
     fields=['first_edu','first_p_year','first_col','sec_edu','sec_p_year','sec_col','thrd_edu','thrd_p_year','thrd_col']
-    success_url='/emp_home'
+    success_url='/emp_home_dashboard'
 
 
 def Emp_exp(request):
@@ -216,7 +216,7 @@ def Emp_exp(request):
             return redirect('/emp_home')
 
         except:
-            return redirect('/emp_profile')
+            return redirect('/emp_home_dashboard')
     return render(request,'emp_exp.html')
 
 
@@ -248,7 +248,7 @@ def Leave_request_form(request):
             e.save()
             return redirect('/leave_r_dt')
         except:
-            return redirect('/emp_home')       
+            return redirect('/emp_home_dashboard')       
     return render(request,'leave_r_form.html')
 
 def Leave_detail(request):
@@ -269,3 +269,11 @@ def dashboard(request):
         return render(request,'emp_dashboard.html')
 
     return render(request,'dashboard.html',{'dt':e,'dt1':e1})
+
+
+   
+class Edu_Exp_Emp(UpdateView):
+    model=Emp_Exp
+    template_name='emp_exp_update.html'
+    fields=['job_title1','company1','years1','job_title2','company2','years2','job_title3','company3','years3']
+    success_url='/emp_home_dashboard'

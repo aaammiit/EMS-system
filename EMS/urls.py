@@ -24,7 +24,7 @@ urlpatterns = [
     # path('jet/', include('jet.urls', 'jet')),
    
     path('admin/', admin.site.urls),
-    path('logout/',RedirectView.as_view(url='/admin/logout/')),
+    path('admin/logout/',RedirectView.as_view(url='/')),
     path('',include('employe.urls')),
     path('',include('Hr_admin.urls')),
 ]+static(settings.MEDIA_URL,document_root=settings.MEDIA_ROOT)
